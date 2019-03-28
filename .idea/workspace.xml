@@ -25,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -220,12 +220,12 @@
       <option name="presentableId" value="Default" />
       <updated>1553810224935</updated>
       <workItem from="1553810228656" duration="160000" />
-      <workItem from="1553810638982" duration="1224000" />
+      <workItem from="1553810638982" duration="1287000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1384000" />
+    <option name="totallyTimeSpent" value="1447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="77" y="51" width="1260" height="683" extended-state="0" />
@@ -277,7 +277,7 @@
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
