@@ -6,6 +6,8 @@ class JsonfilesController < ApplicationController
 
   #To show the list of json files uploaded to the application.
   def index
+    # @jsonfile = Jsonfile.all
+
   end
 
   # default: render 'new' template
