@@ -1,4 +1,14 @@
 -#  This file is app/views/jsonfiles/index.html.haml
-%h2 All Json Files
+%h1 All Json Files
 
-= link_to 'Add new file', new_jsonfile_path
+%table#jsonfiles
+  %thead
+    %tr
+      %th= "Json File"
+  %tbody
+    - @jsonfiles.each do |file|
+      %tr
+        %td= file.title
+        %td= link_to "More about #{file.title}", jsonfile_path(file)
+
+= link_to 'Add new Json File', new_jsonfile_path
