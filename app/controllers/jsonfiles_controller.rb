@@ -1,13 +1,17 @@
 class JsonfilesController < ApplicationController
 
+  def movie_params
+    params.require(:jsonfile).permit(:title, :file)
+  end
+
   #To show the data fields and their relationships in a json data file.
   def show
+    render "show"
   end
 
   #To show the list of json files uploaded to the application.
   def index
     # @jsonfile = Jsonfile.all
-
   end
 
   # default: render 'new' template
@@ -17,6 +21,13 @@ class JsonfilesController < ApplicationController
 
   #To create the jsonfile and store it into our database.
   def create
+    @file = params[:file].read
+    @title = params[:title]
+    @data = JSON.parse(file)
+    @jsonfile = Jsonfile.create({:title => @title, :content => @data})
+    flash[:notice] = "#{@jsonfile.title} was successfully created."
+    redirect_to jsonfiles_path
+    # redirect_to jsonfiles_path
   end
 
   #To edit the jsonfile, but not really necessary at the moment.

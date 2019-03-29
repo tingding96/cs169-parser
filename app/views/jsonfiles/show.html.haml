@@ -1,0 +1,12 @@
+%h3 Details about #{@jsonfile.title}
+
+%ul#details
+  %li
+    Title:
+    = @jsonfile.title
+
+%h4 Description:
+
+%p#description= @movie.description
+
+= link_to 'Back to movie list', movies_path
