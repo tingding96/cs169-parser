@@ -25,8 +25,9 @@ class JsonfilesController < ApplicationController
     @file = params[:content].read
     @title = params[:title]
     @data = JSON.parse(@file)
-    @jsonfile = Jsonfile.create!({:title => @title, :content => @data})
-    @jsonfile.content = @data
+    @jsonfile = Jsonfile.create!(jsonfile_params) do |jsonfile|
+      jsonfile.content = @data
+    end
     flash[:notice] = "#{@jsonfile.title} was successfully created."
     redirect_to jsonfiles_path
   end
