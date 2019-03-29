@@ -6,9 +6,10 @@
     %tr
       %th= "Json File"
   %tbody
-    - @jsonfile.each do |file|
+    - @jsonfiles.each do |file|
       %tr
         %td= file.title
-        %td= link_to "More about #{file.title}", jsonfiles_path(file)
+        %td= link_to "More about #{file.title}", jsonfile_path(file)
 
 = link_to 'Add new Json File', new_jsonfile_path
+

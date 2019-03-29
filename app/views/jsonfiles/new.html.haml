@@ -1,0 +1,11 @@
+%h1 Create New Jsonfile
+
+= form_tag jsonfiles_path, multipart: true do
+
+  = label :jsonfile, :title, 'Title'
+  = text_field :jsonfile, 'title'
+
+  = label :jsonfile, :content, 'Rating'
+  = file_field_tag :content
+
+  = submit_tag 'import'

@@ -1,0 +1,13 @@
+-# in app/views/jsonfiles/show.html.haml
+
+%h3 Details about #{@jsonfile.title}
+
+%ul#details
+  %li
+    Title:
+    = @jsonfile.title
+  %li
+    Content:
+    = @jsonfile.content
+
+= link_to 'Back to jsonfile list', jsonfiles_path
