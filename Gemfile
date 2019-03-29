@@ -3,6 +3,13 @@ source 'https://rubygems.org'
 #Ruby version for this app
 ruby '2.4.0'
 
+#To read haml files for views
+gem 'haml'
+
+gem 'protected_attributes'
+
+gem 'jquery-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.10'
 
