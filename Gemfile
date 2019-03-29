@@ -8,7 +8,6 @@ gem 'haml'
 
 gem 'protected_attributes'
 
-gem 'jquery-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.10'

@@ -2,6 +2,7 @@ class JsonfilesController < ApplicationController
 
   #To show the data fields and their relationships in a json data file.
   def show
+
   end
 
   #To show the list of json files uploaded to the application.
@@ -29,6 +30,10 @@ class JsonfilesController < ApplicationController
 
   #To delete the jsonfile from database.
   def destroy
+    @jsonfile = Jsonfile.find(params[:id])
+    @jsonfile.destroy
+    flash[:notice] = "Json File '#{@mjsonfile.title}' deleted."
+    redirect_to jsonfiles_path
   end
 
 end

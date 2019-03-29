@@ -12,12 +12,12 @@ div#main {
 }
 a {
     background: transparent;
-    color: maroon;
+    color: midnightblue;
     text-decoration: underline;
     font-weight: bold;
 }
 h1 {
-    color: maroon;
+    color: cornflowerblue;
     font-size: 150%;
     font-style: italic;
     display: block;
@@ -27,9 +27,9 @@ h1 {
 h1.title {
     margin: 0 0 1em;
     padding: 10px;
-    background-color: orange;
+    background-color: darkolivegreen;
     color: white;
-    border-bottom: 4px solid gold;
+    border-bottom: 4px solid silver;
     font-size: 2em;
     font-style: normal;
 }
@@ -42,7 +42,7 @@ table#jsonfiles {
 table#jsonfiles th {
     border: 2px solid white;
     font-weight: bold;
-    background-color: wheat;
+    background-color: silver;
 }
 table#jsonfiles th, table#jsonfiles td {
     padding: 4px;
