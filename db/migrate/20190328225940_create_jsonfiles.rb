@@ -1,7 +1,7 @@
 class CreateJsonfiles < ActiveRecord::Migration
   def change
     create_table :jsonfiles do |t|
-      t.string :title
+      t.string :name
       t.string :content
     end
   end

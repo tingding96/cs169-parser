@@ -1,7 +1,7 @@
 class JsonfilesController < ApplicationController
 
   def jsonfile_params
-    params.require(:jsonfile).permit(:title, :content)
+    params.require(:jsonfile).permit(:name, :content)
   end
 
   #To show the data fields and their relationships in a json data file.
@@ -23,12 +23,15 @@ class JsonfilesController < ApplicationController
   #To create the jsonfile and store it into our database.
   def create
     @file = params[:content].read
-    @title = params[:title]
+    @name = params[:content].original_filename
     @data = JSON.parse(@file)
-    @jsonfile = Jsonfile.create!(jsonfile_params) do |jsonfile|
+    @jsonfile = Jsonfile.create!(params[:jsonfile]) do |jsonfile|
       jsonfile.content = @data
+      if jsonfile.name.empty?
+        jsonfile.name = params[:content].original_filename
+      end
     end
-    flash[:notice] = "#{@jsonfile.title} was successfully created."
+    flash[:notice] = "#{@jsonfile.name} was successfully created."
     redirect_to jsonfiles_path
   end
 
@@ -44,7 +47,7 @@ class JsonfilesController < ApplicationController
   def destroy
     @jsonfile = Jsonfile.find(params[:id])
     @jsonfile.destroy
-    flash[:notice] = "Json File '#{@mjsonfile.title}' deleted."
+    flash[:notice] = "Json File '#{@jsonfile.name}' deleted."
     redirect_to jsonfiles_path
   end
 

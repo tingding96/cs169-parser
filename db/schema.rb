@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20190328225940) do
 
   create_table "jsonfiles", force: :cascade do |t|
-    t.string "title"
+    t.string "name"
     t.string "content"
   end
 
