@@ -1,90 +1,5 @@
 
-    console.log("this is x: ")
-    console.log(jsonString)
-    var jsonObj = JSON.parse(jsonString);
-    console.log("--------------------")
-    console.log(jsonObj)
-    var JSON1 =
-        {
-            "WsGroupSaveLiteResult": {
-                "responseMetadata": {
-                    "millis": "152",
-                    "serverVersion": "2.2.1"
-                },
-                "resultMetadata": {
-                    "resultCode": "GROUP_ALREADY_EXISTS",
-                    "resultMessage": "There were 0 successes and 1 failures of saving groups.edu.internet2.middleware.grouper.exception.GroupAddAlreadyExistsException: group already exists with name: 'edu:berkeley:app:bcourses:testgroup', stem name: edu:berkeley:app:bcourses, group extension: testgroup, group dExtension: testgroup, uuid: null, typeOfGroup: null,\nProblem in HibernateSession: HibernateSession (3164af87): notNew, notReadonly, READ_WRITE_NEW, activeTransaction, session (241dde06),\nProblem in HibernateSession: HibernateSession (419dba84): notNew, notReadonly, READ_WRITE_NEW, activeTransaction, session (241dde06),\nProblem saving group: edu:berkeley:app:bcourses:testgroup, thread: 176e05db,\nProblem in HibernateSession: HibernateSession (656f5956): new, notReadonly, READ_WRITE_NEW, notActiveTransaction, session (241dde06)",
-                    "success": "F"
-                },
-                "wsGroup": {
-                    "extension": "testgroup",
-                    "name": "edu:berkeley:app:bcourses:testgroup"
-                }
-            }
-        }
-
-
-    var JSON2 =
-        {
-            "WsAddMemberResults": {
-                "responseMetadata": {
-                    "millis": "212",
-                    "serverVersion": "2.2.1"
-                },
-                "resultMetadata": {
-                    "resultCode": "PROBLEM_WITH_ASSIGNMENT",
-                    "resultMessage": "There were 2 successes and 1 failures of users added to the group.",
-                    "success": "F"
-                },
-                "results": [{
-                    "resultMetadata": {
-                        "resultCode": "SUCCESS_ALREADY_EXISTED",
-                        "success": "T"
-                    },
-                    "wsSubject": {
-                        "id": "242881",
-                        "name": "242881",
-                        "resultCode": "SUCCESS",
-                        "sourceId": "ldap",
-                        "success": "T"
-                    }
-                },
-                    {
-                        "resultMetadata": {
-                            "resultCode": "SUCCESS",
-                            "success": "T"
-                        },
-                        "wsSubject": {
-                            "id": "211159",
-                            "name": "211159",
-                            "resultCode": "SUCCESS",
-                            "sourceId": "ldap",
-                            "success": "T"
-                        }
-                    },
-                    {
-                        "resultMetadata": {
-                            "resultCode": "EXCEPTION",
-                            "resultMessage": "edu.internet2.middleware.grouper.ws.exceptions.WsInvalidQueryException: Problem with Subject, SUBJECT_NOT_FOUND, WsSubjectLookup[\n  cause=edu.internet2.middleware.subject.SubjectNotFoundException: subject not found: 9999999,\n  subjectFindResult=SUBJECT_NOT_FOUND,subjectId=9999999]\n\tat edu.internet2.middleware.grouper.ws.coresoap.WsSubjectLookup.retrieveSubject(WsSubjectLookup.java:535)\n\tat edu.internet2.middleware.grouper.ws.coresoap.WsAddMemberResult.processSubject(WsAddMemberResult.java:263)\n\tat edu.internet2.middleware.grouper.ws.GrouperServiceLogic$1.callback(GrouperServiceLogic.java:292)\n\tat edu.internet2.middleware.grouper.internal.dao.hib3.Hib3TransactionDAO$1.callback(Hib3TransactionDAO.java:66)\n\tat edu.internet2.middleware.grouper.hibernate.HibernateSession.callbackHibernateSession(HibernateSession.java:668)\n\tat edu.internet2.middleware.grouper.internal.dao.hib3.Hib3TransactionDAO.transactionCallback(Hib3TransactionDAO.java:56)\n\tat edu.internet2.middleware.grouper.hibernate.GrouperTransaction.callbackGrouperTransaction(GrouperTransaction.java:87)\n\tat edu.internet2.middleware.grouper.ws.GrouperServiceLogic.addMember(GrouperServiceLogic.java:237)\n\tat edu.internet2.middleware.grouper.ws.coresoap.GrouperService.addMember(GrouperService.java:1263)\n\tat edu.internet2.middleware.grouper.ws.rest.GrouperServiceRest.addMember(GrouperServiceRest.java:315)\n\tat edu.internet2.middleware.grouper.ws.rest.method.GrouperWsRestPutGroup$1.service(GrouperWsRestPutGroup.java:63)\n\tat edu.internet2.middleware.grouper.ws.rest.method.GrouperWsRestPut$1.service(GrouperWsRestPut.java:110)\n\tat edu.internet2.middleware.grouper.ws.rest.method.GrouperRestHttpMethod$3.service(GrouperRestHttpMethod.java:104)\n\tat edu.internet2.middleware.grouper.ws.rest.GrouperRestServlet.service(GrouperRestServlet.java:199)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:717)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)\n\tat edu.internet2.middleware.grouper.ws.GrouperServiceJ2ee.doFilter(GrouperServiceJ2ee.java:661)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:235)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:558)\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:298)\n\tat org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:857)\n\tat org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:588)\n\tat org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)\n\tat java.lang.Thread.run(Thread.java:745)\nCaused by: edu.internet2.middleware.subject.SubjectNotFoundException: subject not found: 9999999\n\tat edu.internet2.middleware.grouper.subj.SourcesXmlResolver.thereCanOnlyBeOne(SourcesXmlResolver.java:486)\n\tat edu.internet2.middleware.grouper.subj.SourcesXmlResolver.find(SourcesXmlResolver.java:133)\n\tat edu.internet2.middleware.grouper.subj.CachingResolver.find(CachingResolver.java:125)\n\tat edu.internet2.middleware.grouper.subj.ValidatingResolver.find(ValidatingResolver.java:91)\n\tat edu.internet2.middleware.grouper.SubjectFinder.findById(SubjectFinder.java:431)\n\tat edu.internet2.middleware.grouper.ws.coresoap.WsSubjectLookup.retrieveSubjectIfNeeded(WsSubjectLookup.java:311)\n\tat edu.internet2.middleware.grouper.ws.coresoap.WsSubjectLookup.retrieveSubject(WsSubjectLookup.java:486)\n\tat edu.internet2.middleware.grouper.ws.GrouperServiceLogic$1.callback(GrouperServiceLogic.java:290)\n\t... 28 more",
-                            "success": "F"
-                        },
-                        "wsSubject": {
-                            "id": "9999999"
-                        }
-                    }
-                ],
-                "wsGroupAssigned": {
-                    "displayExtension": "testgroup",
-                    "displayName": "edu:berkeley:app:bCourses:testgroup",
-                    "extension": "testgroup",
-                    "idIndex": "19235",
-                    "name": "edu:berkeley:app:bcourses:testgroup",
-                    "typeOfGroup": "group",
-                    "uuid": "1cc4398e7aa246af945be1157f448561"
-                }
-            }
-        }
-
+    var jsonObj = JSON.parse(jsonString); // comes js code in the view
 
     var testJSON = {
         "a": "1",
@@ -94,10 +9,6 @@
             "e": "4"
         }
     }
-
-    var jsonString = document
-    console.log("----")
-    console.log(jsonString)
 
     var nodes = []
     var nodeStrings = []
@@ -136,19 +47,17 @@
     }
 
 traverse("[ TEST JSON ]", jsonObj);
-// traverse("[ TEST JSON ]", JSON2);
 
-// ############################################################################################################################################
 // set up SVG for D3
     var width = 960;
     var height = 500;
 
-    var svg = d3.select('body')
+    var svg = d3.select('.content-container')
         .append('svg')
         .on('contextmenu', () => {
             d3.event.preventDefault();
         })
-        .attr("class", "d3-container")
+        .attr("class", "d3-container drop-shadow")
         .call(d3.zoom().on("zoom", function () {
             svg.attr("transform", d3.event.transform)
         }))

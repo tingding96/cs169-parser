@@ -1,0 +1,29 @@
+<% # in app/views/jsonfiles/show.html.haml %>
+<div class="content-container">
+    <%= link_to 'Back to jsonfile list', jsonfiles_path %>
+    <%= button_to 'Back', :back, :class => 'button back-button drop-shadow' %>
+
+    <div class="content-card drop-shadow">
+        <div class="card-header">
+          <%= @jsonfile.name %>
+        </div>
+
+        <div id="json-content" class="body-text">
+          <%= eval(@jsonfile.content).to_json %>
+        </div>
+      </li>
+    </div>
+
+
+  <%= button_to 'Delete', jsonfile_path(@jsonfile), :method => :delete, :confirm => 'Are you sure?', :class => 'button delete-button drop-shadow' %>
+
+  <script>
+      // pull json to use in d3 graph visualization
+      var jsonString = document.getElementById('json-content').innerText;
+  </script>
+  <%= javascript_include_tag "https://d3js.org/d3.v5.min.js" %>
+  <%= javascript_include_tag "d3_graph" %>
+
+</div>
+
+
