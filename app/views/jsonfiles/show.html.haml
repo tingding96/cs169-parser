@@ -8,11 +8,15 @@
     = @jsonfile.name
   %li
     Content:
-    = @jsonfile.content
+    #json-content
+      = eval(@jsonfile.content).to_json
 
 = link_to 'Back to jsonfile list', jsonfiles_path
-
 = button_to 'Delete', jsonfile_path(@jsonfile), :method => :delete, :confirm => 'Are you sure?'
+
+-# pull json to use in d3 graph visualization
+:javascript
+  var jsonString = document.getElementById('json-content').innerText;
 
 = javascript_include_tag "https://d3js.org/d3.v5.min.js"
 = javascript_include_tag "d3_graph"
