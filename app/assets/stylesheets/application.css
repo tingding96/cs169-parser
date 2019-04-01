@@ -137,6 +137,11 @@ button,
     background-color: var(--primary-blue);
 }
 
+.back {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .content-card {
     background-color: white;
     padding: 20px;
@@ -162,7 +167,7 @@ button,
 }
 
 .nav-bar-title {
-    margin-left: 20px;
+    margin-left: 40px;
     font-size: 36px;
     font-family: Aileron, sans-serif;
     color: white;

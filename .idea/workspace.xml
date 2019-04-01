@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5127888-7f1d-4e0d-99d8-5215b376e2da" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/d3_graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/d3_graph.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/jsonfiles/index.html.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jsonfiles/index.html.haml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/jsonfiles/show.html.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jsonfiles/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/jsonfiles/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/jsonfiles/show.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -55,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/jsonfiles/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -63,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="165" column="17" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
+            <state relative-caret-position="354">
+              <caret line="141" column="17" selection-start-line="141" selection-start-column="17" selection-end-line="141" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -99,6 +95,7 @@
       <find>class</find>
       <find>file parse</find>
       <find>body</find>
+      <find>back-</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,9 +120,9 @@
         <option value="$PROJECT_DIR$/app/views/jsonfiles/show.html.haml" />
         <option value="$PROJECT_DIR$/app/views/jsonfiles/index.html.haml" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/d3_graph.js" />
-        <option value="$PROJECT_DIR$/app/views/jsonfiles/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.haml" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/jsonfiles/show.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
       </list>
     </option>
@@ -355,12 +352,12 @@
       <workItem from="1553810638982" duration="7890000" />
       <workItem from="1553875756116" duration="752000" />
       <workItem from="1553902148615" duration="5679000" />
-      <workItem from="1554013796419" duration="11069000" />
+      <workItem from="1554013796419" duration="11443000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25550000" />
+    <option name="totallyTimeSpent" value="25924000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -552,13 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/jsonfiles/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -566,10 +556,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/jsonfiles/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="165" column="17" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
+        <state relative-caret-position="354">
+          <caret line="141" column="17" selection-start-line="141" selection-start-column="17" selection-end-line="141" selection-end-column="17" />
         </state>
       </provider>
     </entry>
