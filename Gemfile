@@ -55,5 +55,6 @@ group :development do
   gem 'spring'
 end
 
-gem 'haml'
+# for visualizing JSON's in graph form
+gem 'd3_rails', '~> 4.1', '>= 4.1.1'
 
