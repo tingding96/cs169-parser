@@ -25,7 +25,7 @@ class JsonfilesController < ApplicationController
     @file = params[:content].read
     @name = params[:content].original_filename
     @data = JSON.parse(@file)
-    @jsonfile = Jsonfile.create!(params[:jsonfile]) do |jsonfile|
+    @jsonfile = Jsonfile.create!(jsonfile_params) do |jsonfile|
       jsonfile.content = @data
       if jsonfile.name.empty?
         jsonfile.name = params[:content].original_filename
