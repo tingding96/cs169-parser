@@ -1,0 +1,14 @@
+-#  This file is app/views/xiles/index.html.haml
+%h1 All Files
+
+%table#xfiles
+  %thead
+    %tr
+      %th= "File"
+  %tbody
+    - @xfiles.each do |xfile|
+      %tr
+        %td= xfile.name
+        %td= link_to "More about #{xfile.name}", xfile_path(xfile)
+
+= link_to 'Add new File', new_xfile_path
