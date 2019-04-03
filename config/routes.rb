@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :jsonfiles
+  resources :xfiles
 
-  # map '/' to be a redirect to '/jsonfiles'
-  root :to => redirect('/jsonfiles')
+  # map '/' to be a redirect to '/files'
+  root :to => redirect('/xfiles')
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

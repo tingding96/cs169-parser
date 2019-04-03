@@ -11,9 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190328225940) do
+ActiveRecord::Schema.define(version: 20190403010421) do
+
+  create_table "files", force: :cascade do |t|
+    t.string "name"
+    t.string "content"
+  end
 
   create_table "jsonfiles", force: :cascade do |t|
+    t.string "name"
+    t.string "content"
+  end
+
+  create_table "xfiles", force: :cascade do |t|
     t.string "name"
     t.string "content"
   end

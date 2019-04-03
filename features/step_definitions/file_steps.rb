@@ -1,18 +1,19 @@
-Given(/^the following files exist:$/) do |table|
-  # table is a Cucumber::MultilineArgument::DataTable
-  pending # Write code here that turns the phrase above into concrete actions
+Given(/^the following files exist:$/) do |xfile_table|
+  xfile_table.hashes.each do |xfile|
+    Xfile.create xfile
+  end
 end
 
-Given(/^I am on the File Parser home page$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+And /^(?:|I )am on (.+)$/ do |page_name|
+  visit path_to(page_name)
 end
 
-Given(/^I am on the home page$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
-
-Then(/^I should see "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I should see "([^"]*)"$/) do |text|
+  if page.respond_to? :should
+    page.should have_content(text)
+  else
+    assert page.has_content?(text)
+  end
 end
 
 When(/^I click "([^"]*)" for "([^"]*)"$/) do |arg1, arg2|

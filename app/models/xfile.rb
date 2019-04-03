@@ -1,3 +1,3 @@
-class Jsonfile < ActiveRecord::Base
+class Xfile < ActiveRecord::Base
   attr_accessible :name, :content
 end

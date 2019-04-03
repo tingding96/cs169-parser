@@ -8,6 +8,9 @@ gem 'haml'
 
 gem 'protected_attributes'
 
+#To parse xml and json into ruby hash
+gem 'crack'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.10'

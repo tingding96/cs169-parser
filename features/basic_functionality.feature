@@ -12,7 +12,7 @@ Background: files have been added to database
   | sample2                 | {"b": "b"}     |
   | sample3                 | {"c": "c"}     |
 
-  And I am on the File Parser home page
+  And I am on the FileParser homepage
 
 Scenario: see all the files
   Given I am on the home page
