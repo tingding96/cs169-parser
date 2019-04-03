@@ -1,9 +1,13 @@
 <% # in app/views/jsonfiles/show.html.haml %>
 <div class="content-container">
+
   <div class="back">
     <%= link_to 'Back to file list', xfiles_path %>
   </div>
 
+  <div class="label_title">
+    Filename and Content
+  </div>
 
     <div class="content-card drop-shadow">
         <div class="card-header">
@@ -16,8 +20,17 @@
       </li>
     </div>
 
+  <div class="label_title">
+    Properties
+  </div>
+
 
   <%= button_to 'Delete', xfile_path(@xfile), :method => :delete, :confirm => 'Are you sure?', :class => 'button delete-button drop-shadow' %>
+
+  <div class="label_title">
+    Graph of Properties
+  </div>
+
   <p>
     Click and drag to pan, scroll up and down to zoom.
   </p>
