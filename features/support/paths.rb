@@ -13,7 +13,10 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /^the (FileParser )?home\s?page$/ then '/files'
+    when /^the (FileParser )?home\s?page$/ then '/xfiles'
+
+    when /^file upload page$/i
+      new_xfile_path()
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
@@ -22,13 +25,10 @@ module NavigationHelpers
     #     user_profile_path(User.find_by_login($1))
 
     when /^the edit page for "(.*)"$/i
-      edit_movie_path(Movie.find_by_title($1))
+      edit_xfile_path(Xfile.find_by_name($1))
 
     when /^the details page for "(.*)"$/i
-      movie_path(Movie.find_by_title($1))
-
-    when /^the Similar Movies page for "(.*)"$/i
-      director_path(Movie.find_by_title($1))
+      xfile_path(Xfile.find_by_name($1))
 
     else
       begin

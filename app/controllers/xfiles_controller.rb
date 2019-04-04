@@ -2,6 +2,7 @@ class XfilesController < ApplicationController
 
   require 'crack' # XML and JSON parsingrequire 'crack/json' # Only JSON parsing
   require 'crack/xml' # Only XML parsing
+  require 'json'
 
   def xfile_params
     params.require(:xfile).permit(:name, :content)

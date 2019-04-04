@@ -1,25 +1,16 @@
-Feature: display list of files and show file information
+Feature: json and xml file upload
  
   As a calcentral developer
   So that I can see overlapping fields for models
-  I want to upload files corresponding to each model and see their contents.
+  I want to upload json and xml files corresponding to each model and see their contents.
 
-Background: files have been added to database
-  
-  Given the following files exist:
-  | title                   | rating |
-  | sample1                 | {"a": "a"}     |
-  | sample2                 | {"b": "b"}     |
-  | sample3                 | {"c": "c"}     |
+Scenario: Uploading a valid file with data for 3 new models
+  Given I visit the file upload page
+  When I upload a json file
+  And I should be sent to the products index page
 
-  And I am on the FileParser homepage
-
-Scenario: see all the files
-  Given I am on the home page
-  Then I should see "sample1"
-  And I should see "sample2"
-  And I should see "sample3"
-
-Scenario: see file contents
-  When I click "more info" for "sample1"
-  Then I should see "{"a": "a"}"
+Scenario: Not uploading a file
+  Given I visit the file upload page
+  When I don't upload a file
+  Then I should see "Please attach a valid file"
+  And I should see the file upload page again
