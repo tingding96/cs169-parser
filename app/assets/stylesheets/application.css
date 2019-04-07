@@ -9,7 +9,6 @@
 html, body {
     margin: 0;
     padding: 0;
-    background: White;
     color: var(--text-grey);
     background-color: var(--background-grey);
     font-family: Arial, sans-serif;
@@ -45,10 +44,12 @@ h1.title {
     font-style: normal;
 }
 table#jsonfiles {
-    margin: 10px;
-    border-collapse: collapse;
+
+    border-collapse:separate;
+    border-spacing:15px;
     width: 100%;
-    border-bottom: 2px solid black;
+
+
 }
 table#jsonfiles th {
     border: 2px solid white;
@@ -56,8 +57,9 @@ table#jsonfiles th {
     background-color: silver;
 }
 table#jsonfiles th, table#jsonfiles td {
-    padding: 4px;
+    padding: 10px;
     text-align: left;
+    background-color: #ffffff;
 }
 table#jsonfiles th.hilite {
     background-color: yellow;
