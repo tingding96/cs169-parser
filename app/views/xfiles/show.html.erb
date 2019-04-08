@@ -24,14 +24,12 @@
     Properties
   </div>
 
-  <!--div class="prop_container">
-    <div class="prop-button">prop1</div>
-    <div class="prop-button">prop2</div>
-    <div class="prop-button">prop3</div>
-  </div-->
-
-  <div id="file_properties" class="body_text">
-    <%= @properties %>
+  <div class="prop_container">
+    <% @properties.each do |prop| %>
+      <div class="prop-button drop-shadow">
+        <%= prop %>
+      </div>
+    <% end %>
   </div>
 
   <div class="label_title">
