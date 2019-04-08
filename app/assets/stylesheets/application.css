@@ -145,8 +145,7 @@ button,
     border-radius: 11.5px;
     box-shadow: 0 0 11px -5px rgba(0, 0, 0, 0.3);
     background-color: #ffffff;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding: .75% 2% .75%;
     margin: .5%;
     display: flex;
     justify-content: center;
