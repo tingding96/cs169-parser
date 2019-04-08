@@ -12,6 +12,8 @@ class XfilesController < ApplicationController
   def show
     id = params[:id] # retrieve movie ID from URI route
     @xfile = Xfile.find(id) # look up movie by unique ID
+    @content = eval(@xfile.content)
+    @properties = Xfile.get_properties(@content)
   end
 
   #To show the list of files uploaded to the application.
