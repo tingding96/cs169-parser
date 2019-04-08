@@ -13,11 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20190403010421) do
 
-  create_table "files", force: :cascade do |t|
-    t.string "name"
-    t.string "content"
-  end
-
   create_table "jsonfiles", force: :cascade do |t|
     t.string "name"
     t.string "content"
