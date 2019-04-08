@@ -1,9 +1,13 @@
 <% # in app/views/jsonfiles/show.html.haml %>
 <div class="content-container">
+
   <div class="back">
     <%= link_to 'Back to file list', xfiles_path %>
   </div>
 
+  <div class="label_title">
+    Filename and Content
+  </div>
 
     <div class="content-card drop-shadow">
         <div class="card-header">
@@ -16,8 +20,20 @@
       </li>
     </div>
 
+  <div class="label_title">
+    Properties
+  </div>
 
-  <%= button_to 'Delete', xfile_path(@xfile), :method => :delete, :confirm => 'Are you sure?', :class => 'button delete-button drop-shadow' %>
+  <div class="prop_container">
+    <div class="prop-button">prop1</div>
+    <div class="prop-button">prop2</div>
+    <div class="prop-button">prop3</div>
+  </div>
+
+  <div class="label_title">
+    Graph of Properties
+  </div>
+
   <p>
     Click and drag to pan, scroll up and down to zoom.
   </p>
@@ -27,6 +43,10 @@
   </script>
   <%= javascript_include_tag "https://d3js.org/d3.v5.min.js" %>
   <%= javascript_include_tag "d3_graph" %>
+
+
+  <%= button_to 'Delete File', xfile_path(@xfile), :method => :delete, :confirm => 'Are you sure?', :class => 'button delete-button drop-shadow' %>
+
 
 </div>
 
