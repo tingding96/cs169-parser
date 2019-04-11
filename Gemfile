@@ -52,7 +52,7 @@ group :development, :test do
   gem 'capybara', '2.4.4'
   gem 'launchy'
   gem 'rspec-rails', '3.7.2'
-  gem 'ZenTest', '4.11.0'
+  gem 'ZenTest'
 end
 
 group :test do
@@ -71,4 +71,3 @@ end
 
 # for visualizing JSON's in graph form
 gem 'd3_rails', '~> 4.1', '>= 4.1.1'
-

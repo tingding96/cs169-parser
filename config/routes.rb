@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :xfiles
+  resources :xfiles do
+    collection do
+      get'shared_props'
+    end
+  end
+  # get'xfiles/shared_props' => 'xfiles#shared_props'
 
   # map '/' to be a redirect to '/files'
   root :to => redirect('/xfiles')
