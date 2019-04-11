@@ -16,7 +16,13 @@ gem 'crack'
 gem 'rails', '4.2.10'
 
 # Use sqlite3 version 1.3.11 as the database for Active Record
-gem 'sqlite3', '~> 1.3.11'
+group :development, :test do
+  gem 'sqlite3', '~> 1.3.11'
+end
+group :production do
+  gem 'pg', '~> 0.21'
+  gem 'rails_12factor'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
