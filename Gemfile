@@ -75,5 +75,9 @@ group :development do
   gem 'spring'
 end
 
+#test coverage rubygems
+gem 'simplecov'
+gem 'simplecov-console'
+
 # for visualizing JSON's in graph form
 gem 'd3_rails', '~> 4.1', '>= 4.1.1'
