@@ -5,7 +5,7 @@ Given(/^the following files exist:$/) do |xfiles_table|
 end
 
 When /^(?:|I )upload a json file$/ do
-  attach_file(:xfile, File.join(RAILS_ROOT, 'features', 'upload-files', 'sample1.json'))
+  attach_file(:content, File.join(RAILS_ROOT, 'features', 'upload-files', 'sample1.json'))
   click_button "import"
 end
 
@@ -33,8 +33,8 @@ Then(/^I should see "([^"]*)"a"([^"]*)"a"([^"]*)"$/) do |arg1, arg2, arg3|
   pending # Write code here that turns the phrase above into concrete actions
 end
 
-When(/^I should be sent to the products index page$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+And(/^I should be sent to the (.+)$/) do |page_name|
+  visit path_to(page_name)
 end
 
 When(/^I don't upload a file$/) do
