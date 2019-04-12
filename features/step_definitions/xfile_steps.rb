@@ -5,7 +5,7 @@ Given(/^the following files exist:$/) do |xfiles_table|
 end
 
 When /^(?:|I )upload a json file$/ do
-  attach_file(:xfile, File.join(RAILS_ROOT, 'features', 'upload-files', 'sample1.json'))
+  attach_file(:content, File.join(RAILS_ROOT, 'features', 'upload-files', 'sample1.json'))
   click_button "import"
 end
 
