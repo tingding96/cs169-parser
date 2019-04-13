@@ -1,3 +1,5 @@
+[![Test Coverage](https://api.codeclimate.com/v1/badges/2c4dd0efe087817091bf/test_coverage)](https://codeclimate.com/github/rileydcampbell/cs169-parser/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/2c4dd0efe087817091bf/maintainability)](https://codeclimate.com/github/rileydcampbell/cs169-parser/maintainability)
 == README
 
 This README would normally document whatever steps are necessary to get the
