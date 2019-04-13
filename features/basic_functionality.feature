@@ -9,8 +9,8 @@ Scenario: Uploading a valid file with data for 3 new models
   When I upload a json file
   And I should be sent to the products index page
 
-Scenario: Not uploading a file
-  Given I visit the file upload page
-  When I don't upload a file
-  Then I should see "Please attach a valid file"
-  And I should see the file upload page again
+# Scenario: Not uploading a file
+#   Given I visit the file upload page
+#   When I don't upload a file
+#   Then I should see "Please attach a valid file"
+#   And I should see the file upload page again
