@@ -65,6 +65,7 @@ group :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   gem 'simplecov', :require => false
+  gem 'simplecov-console'
 end
 
 group :development do
@@ -74,10 +75,6 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
-#test coverage rubygems
-gem 'simplecov'
-gem 'simplecov-console'
 
 # for visualizing JSON's in graph form
 gem 'd3_rails', '~> 4.1', '>= 4.1.1'
