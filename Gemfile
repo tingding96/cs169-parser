@@ -60,12 +60,12 @@ group :development, :test do
   gem 'rspec-rails', '3.7.2'
   gem 'ZenTest'
 end
-
+gem 'simplecov', :require => false
+gem 'simplecov-console'
 group :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
-  gem 'simplecov', :require => false
-  gem 'simplecov-console'
+
 end
 
 group :development do
