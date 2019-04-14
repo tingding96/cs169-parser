@@ -28,9 +28,11 @@
   </div>
 
   <div class="prop_container">
-    <div class="prop-button">prop1</div>
-    <div class="prop-button">prop2</div>
-    <div class="prop-button">prop3</div>
+    <% @properties.each do |prop| %>
+      <div class="prop-button drop-shadow">
+        <%= prop %>
+      </div>
+    <% end %>
   </div>
 
   <div class="label_title">

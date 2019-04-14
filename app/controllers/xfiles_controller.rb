@@ -61,6 +61,25 @@ class XfilesController < ApplicationController
   def update
   end
 
+  def shared_props
+    prop_sets = []
+    xfile_ids = params[:xfile_ids].chars
+    xfile_ids.each do |id|
+      current_xfile = Xfile.find(id.to_i)
+      content = eval(current_xfile.content)
+      properties = Xfile.get_properties(content)
+      puts("content: ",content)
+      prop_sets.push(properties)
+
+    end
+
+    @shared_set = prop_sets[0]
+    prop_sets.each do |set|
+      @shared_set = @shared_set & set
+    end
+    puts("shared set: ", @shared_set)
+  end
+
   #To delete the file from database.
   def destroy
     @xfile = Xfile.find(params[:id])
