@@ -1,7 +1,7 @@
 class Xfile < ActiveRecord::Base
   attr_accessible :name, :content
 
-  def get_properties(h)
+  def self.get_properties(h)
     new_array= []
     if h.is_a?(Hash)
       h.each_pair do |key, val|
@@ -13,4 +13,5 @@ class Xfile < ActiveRecord::Base
     end
     return new_array
   end
+
 end
