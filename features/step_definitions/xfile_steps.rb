@@ -9,6 +9,16 @@ When /^(?:|I )upload a json file$/ do
   click_button "import"
 end
 
+When /^(?:|I )upload a xml file$/ do
+  attach_file(:content, File.join(RAILS_ROOT, 'features', 'upload-files', 'sample2.xml'))
+  click_button "import"
+end
+
+When /^(?:|I )upload an invalid file$/ do
+  attach_file(:content, File.join(RAILS_ROOT, 'features', 'upload-files', 'sample3.txt'))
+  click_button "import"
+end
+
 Given /^(?:|I )visit the (.+)$/ do |page_name|
   visit path_to(page_name)
 end
@@ -38,9 +48,9 @@ And(/^I should be sent to the (.+)$/) do |page_name|
 end
 
 When(/^I don't upload a file$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  click_button "import"
 end
 
 Then(/^I should see the file upload page again$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit path_to("file upload page")
 end

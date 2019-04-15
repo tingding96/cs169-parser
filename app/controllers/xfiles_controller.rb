@@ -14,6 +14,7 @@ class XfilesController < ApplicationController
     @xfile = Xfile.find(id) # look up movie by unique ID
     @content = eval(@xfile.content)
     @properties = Xfile.get_properties(@content)
+
   end
 
   #To show the list of files uploaded to the application.
@@ -28,28 +29,39 @@ class XfilesController < ApplicationController
 
   #To create the file and store it into our database.
   def create
-    @xfile = params[:content].read
-    @name = params[:content].original_filename
-    @extension = @name.split('.').last
-    if @extension == "json"
-      @data = Crack::JSON.parse(@xfile)
-      @xfile = Xfile.create!(xfile_params) do |xfile|
-        xfile.content = @data
-        if xfile.name.empty?
-          xfile.name = params[:content].original_filename
+    @content = params[:content]
+    if @content.nil?
+      flash[:notice] = "Please attach a valid file"
+      redirect_to new_xfile_path
+    else
+      @xfile = @content.read
+      @name = params[:content].original_filename
+      @extension = @name.split('.').last
+      if @extension == "json"
+        @data = Crack::JSON.parse(@xfile)
+        @xfile = Xfile.create!(xfile_params) do |xfile|
+          xfile.content = @data
+          if xfile.name.empty?
+            xfile.name = params[:content].original_filename
+          end
         end
-      end
-    elsif @extension == "xml"
-      @data = Crack::XML.parse(@xfile)
-      @xfile = Xfile.create!(xfile_params) do |xfile|
-        xfile.content = @data
-        if xfile.name.empty?
-          xfile.name = params[:content].original_filename
+        flash[:notice] = "#{@xfile.name} was successfully created."
+        redirect_to xfiles_path
+      elsif @extension == "xml"
+        @data = Crack::XML.parse(@xfile)
+        @xfile = Xfile.create!(xfile_params) do |xfile|
+          xfile.content = @data
+          if xfile.name.empty?
+            xfile.name = params[:content].original_filename
+          end
         end
+        flash[:notice] = "#{@xfile.name} was successfully created."
+        redirect_to xfiles_path
+      else
+        flash[:notice] = "Incompatible file type, please attach a valid file"
+        redirect_to new_xfile_path
       end
     end
-    flash[:notice] = "#{@xfile.name} was successfully created."
-    redirect_to xfiles_path
   end
 
   #To edit the file, but not really necessary at the moment.

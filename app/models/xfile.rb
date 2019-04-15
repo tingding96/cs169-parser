@@ -1,6 +1,6 @@
 class Xfile < ActiveRecord::Base
   attr_accessible :name, :content
-  
+
   def self.get_properties(h)
     new_array = []
     if h.is_a?(Hash)
