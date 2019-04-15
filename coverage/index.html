@@ -51,6 +51,7 @@
     <tbody>
       
       <tr>
+
         <td class="strong"><a href="#9a9e8265e9c2d49c92c8878d1e9be3a4cbc4b712" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>5</td>
@@ -61,6 +62,7 @@
       </tr>
       
       <tr>
+
         <td class="strong"><a href="#bff4e1ff0b9a840f438b0485bc3ebd9727da2bb9" class="src_link" title="app/controllers/xfiles_controller.rb">app/controllers/xfiles_controller.rb</a></td>
         <td class="red strong">66.67 %</td>
         <td>102</td>
@@ -94,10 +96,9 @@
         <td class="strong"><a href="#ac4d50cb05edef18c471682427b93556e273b876" class="src_link" title="app/models/xfile.rb">app/models/xfile.rb</a></td>
         <td class="red strong">30.0 %</td>
         <td>17</td>
-        <td>10</td>
         <td>3</td>
-        <td>7</td>
-        <td>0.3</td>
+        <td>14</td>
+        <td>0.2</td>
       </tr>
       
     </tbody>
@@ -109,6 +110,7 @@
           <div class="file_list_container" id="Controllers">
   <h2>
     <span class="group_name">Controllers</span>
+
     (<span class="covered_percent"><span class="red">67.74%</span></span>
      covered at
      <span class="covered_strength">
@@ -166,20 +168,20 @@
           <div class="file_list_container" id="Models">
   <h2>
     <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="red">30.0%</span></span>
+    (<span class="covered_percent"><span class="red">17.65%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.3
+         0.2
        </span>
     </span> hits/line)
   </h2>
   <a name="Models"></a>
   <div>
     <b>1</b> files in total.
-    <b>10</b> relevant lines. 
+    <b>17</b> relevant lines. 
     <span class="green"><b>3</b> lines covered</span> and
-    <span class="red"><b>7</b> lines missed </span>
+    <span class="red"><b>14</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -199,10 +201,9 @@
         <td class="strong"><a href="#ac4d50cb05edef18c471682427b93556e273b876" class="src_link" title="app/models/xfile.rb">app/models/xfile.rb</a></td>
         <td class="red strong">30.0 %</td>
         <td>17</td>
-        <td>10</td>
         <td>3</td>
-        <td>7</td>
-        <td>0.3</td>
+        <td>14</td>
+        <td>0.2</td>
       </tr>
       
     </tbody>
@@ -898,45 +899,83 @@
         <li class="covered" data-hits="2" data-linenumber="75">
           <span class="hits">2</span>
           
-          <code class="ruby">  def shared_props</code>
+          <code class="ruby">  def shared_files</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="76">
           
           
-          <code class="ruby">    prop_sets = []</code>
+          <code class="ruby">    prop = params[:prop]</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="77">
           
           
-          <code class="ruby">    xfile_ids = params[:xfile_ids].chars</code>
+          <code class="ruby">    @xfiles = Xfile.where(&quot;content like ?&quot;, &quot;%\&quot;#{prop}\&quot;%&quot;)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="78">
           
           
-          <code class="ruby">    xfile_ids.each do |id|</code>
+          <code class="ruby">    render &#39;shared_files&#39;</code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="69">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def shared_props</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="70">
+          
+          
+          <code class="ruby">    prop_sets = []</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="71">
+          
+          
+          <code class="ruby">    xfile_ids = params[:xfile_ids].chars</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="72">
+          
+          
+          <code class="ruby">    xfile_ids.each do |id|</code>
+        </li>
+
         <li class="missed" data-hits="0" data-linenumber="79">
           
           
           <code class="ruby">      current_xfile = Xfile.find(id.to_i)</code>
         </li>
       
+
         <li class="missed" data-hits="0" data-linenumber="80">
           
           
           <code class="ruby">      content = eval(current_xfile.content)</code>
         </li>
       
+
         <li class="missed" data-hits="0" data-linenumber="81">
           
           
           <code class="ruby">      properties = Xfile.get_properties(content)</code>
         </li>
-      
+
         <li class="missed" data-hits="0" data-linenumber="82">
           
           
@@ -949,114 +988,130 @@
           <code class="ruby">      prop_sets.push(properties)</code>
         </li>
       
+
         <li class="never" data-hits="" data-linenumber="84">
           
           
           <code class="ruby"></code>
         </li>
       
+
         <li class="never" data-hits="" data-linenumber="85">
           
           
           <code class="ruby">    end</code>
         </li>
       
+
         <li class="never" data-hits="" data-linenumber="86">
           
           
           <code class="ruby"></code>
         </li>
       
+
         <li class="missed" data-hits="0" data-linenumber="87">
           
           
           <code class="ruby">    @shared_set = prop_sets[0]</code>
         </li>
-      
+
         <li class="missed" data-hits="0" data-linenumber="88">
           
           
           <code class="ruby">    prop_sets.each do |set|</code>
         </li>
       
+
         <li class="missed" data-hits="0" data-linenumber="89">
           
           
           <code class="ruby">      @shared_set = @shared_set &amp; set</code>
         </li>
-      
+
         <li class="never" data-hits="" data-linenumber="90">
           
           
           <code class="ruby">    end</code>
         </li>
       
+
         <li class="missed" data-hits="0" data-linenumber="91">
           
           
           <code class="ruby">    puts(&quot;shared set: &quot;, @shared_set)</code>
         </li>
       
+
         <li class="never" data-hits="" data-linenumber="92">
           
           
           <code class="ruby">  end</code>
         </li>
       
+
         <li class="never" data-hits="" data-linenumber="93">
           
           
           <code class="ruby"></code>
         </li>
       
+
         <li class="never" data-hits="" data-linenumber="94">
           
           
           <code class="ruby">  #To delete the file from database.</code>
         </li>
-      
+
         <li class="covered" data-hits="2" data-linenumber="95">
           <span class="hits">2</span>
           
           <code class="ruby">  def destroy</code>
         </li>
-      
+
         <li class="missed" data-hits="0" data-linenumber="96">
           
           
           <code class="ruby">    @xfile = Xfile.find(params[:id])</code>
         </li>
       
+
         <li class="missed" data-hits="0" data-linenumber="97">
           
           
           <code class="ruby">    @xfile.destroy</code>
         </li>
       
+
         <li class="missed" data-hits="0" data-linenumber="98">
           
           
           <code class="ruby">    flash[:notice] = &quot;File &#39;#{@xfile.name}&#39; deleted.&quot;</code>
         </li>
       
+
         <li class="missed" data-hits="0" data-linenumber="99">
           
           
           <code class="ruby">    redirect_to xfiles_path</code>
         </li>
       
+
         <li class="never" data-hits="" data-linenumber="100">
           
           
           <code class="ruby">  end</code>
         </li>
       
+
         <li class="never" data-hits="" data-linenumber="101">
+>>>>>> master
           
           
           <code class="ruby"></code>
         </li>
       
+
         <li class="never" data-hits="" data-linenumber="102">
           
           
@@ -1068,6 +1123,7 @@
 </div>
 
       
+
         <div class="source_table" id="b371b1398201311a51d9cf19e1b23c6f75de7b27">
   <div class="header">
     <h3>app/helpers/application_helper.rb</h3>
@@ -1099,6 +1155,7 @@
 </div>
 
       
+
         <div class="source_table" id="ddb83db58c94964bd077ba91367bd6982fa06e1e">
   <div class="header">
     <h3>app/helpers/jsonfiles_helper.rb</h3>
@@ -1130,14 +1187,15 @@
 </div>
 
       
+
         <div class="source_table" id="ac4d50cb05edef18c471682427b93556e273b876">
   <div class="header">
     <h3>app/models/xfile.rb</h3>
-    <h4><span class="red">30.0 %</span> covered</h4>
+    <h4><span class="red">17.65 %</span> covered</h4>
     <div>
-      <b>10</b> relevant lines. 
+      <b>17</b> relevant lines. 
       <span class="green"><b>3</b> lines covered</span> and
-      <span class="red"><b>7</b> lines missed.</span>
+      <span class="red"><b>14</b> lines missed.</span>
     </div>
   </div>
   
@@ -1189,58 +1247,124 @@
         <li class="missed" data-hits="0" data-linenumber="8">
           
           
-          <code class="ruby">        new_array = new_array + [key]</code>
+          <code class="ruby">        if new_array.exclude?(key)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="9">
           
           
-          <code class="ruby">        new_array = new_array + get_properties(val)</code>
+          <code class="ruby">          new_array = new_array + [key]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby">        end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="missed" data-hits="0" data-linenumber="11">
           
           
-          <code class="ruby">    else</code>
+          <code class="ruby">        new_keys = get_properties(val)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="12">
           
           
-          <code class="ruby">      return []</code>
+          <code class="ruby">        new_keys.each do |k|</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="missed" data-hits="0" data-linenumber="13">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">          if new_array.exclude?(k)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="14">
           
           
-          <code class="ruby">    return new_array</code>
+          <code class="ruby">            new_array = new_array + [k]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">          end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">        end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
+          
+          <code class="ruby">    elsif h.is_a?(Array) &amp;&amp; h[0].is_a?(Hash)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="19">
+          
+          
+          <code class="ruby">      h.each do |hash|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="20">
+          
+          
+          <code class="ruby">        new_array = new_array + get_properties(hash)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="23">
+          
+          
+          <code class="ruby">      return []</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="25">
+          
+          
+          <code class="ruby">    return new_array</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">end</code>

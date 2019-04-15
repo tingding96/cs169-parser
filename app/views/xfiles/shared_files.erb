@@ -1,0 +1,20 @@
+<% #  This file is app/views/xiles/shared_files.html.haml %>
+
+<div class="content-container">
+  <div class="label_title">
+    Similar files
+  </div>
+  <table id="jsonfiles">
+    <tbody>
+      <% @xfiles.each do |xfile| %>
+        <tr class="drop-shadow">
+          <td>
+            <%= link_to "More about #{xfile.name}", xfile_path(xfile) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to 'Add new File', new_xfile_path %>
+  <%= link_to 'All files', xfiles_path %>
+</div>

@@ -72,6 +72,12 @@ class XfilesController < ApplicationController
   def update
   end
 
+  def shared_files
+    prop = params[:prop]
+    @xfiles = Xfile.where("content like ?", "%\"#{prop}\"%")
+    render 'shared_files'
+  end
+
   def shared_props
     prop_sets = []
     xfile_ids = params[:xfile_ids].chars

@@ -80,6 +80,12 @@
         0,
         0,
         0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -112,6 +118,7 @@
         1,
         null
       ],
+
       "/Users/JeffreyWang/cs169/parser/app/helpers/application_helper.rb": [
         1,
         null
@@ -131,6 +138,17 @@
         0,
         0,
         null,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
         null,
         0,
         null,
@@ -140,6 +158,7 @@
         null
       ]
     },
+
     "timestamp": 1555345374
   },
   "RSpec": {
