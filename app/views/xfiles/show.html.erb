@@ -14,9 +14,9 @@
           <%= @xfile.name %>
         </div>
 
-        <div id="json-content" class="body-text">
-          <%= eval(@xfile.content).to_json %>
-        </div>
+        <pre id="json-content" class="body-text">
+            <%= eval(@xfile.content).to_json %>
+        </pre>
       </li>
     </div>
   <div id= "file_properties" class="body_text">
@@ -44,7 +44,10 @@
   </p>
   <script>
       // pull json to use in d3 graph visualization
-      var jsonString = document.getElementById('json-content').innerText;
+      let jsonString = document.getElementById('json-content').innerText;
+      var jsonObj = JSON.parse(jsonString);
+      let prettyJSON = JSON.stringify(jsonObj, undefined, 4);
+      document.getElementById('json-content').innerText = prettyJSON;
   </script>
   <%= javascript_include_tag "https://d3js.org/d3.v5.min.js" %>
   <%= javascript_include_tag "d3_graph" %>
