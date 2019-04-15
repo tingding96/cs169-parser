@@ -61,6 +61,7 @@ group :development, :test do
   gem 'capybara', '2.4.4'
   gem 'launchy'
   gem 'rspec-rails', '3.7.2'
+  gem 'guard-rspec'
   gem 'ZenTest'
 end
 
