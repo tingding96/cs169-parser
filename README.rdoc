@@ -1,3 +1,5 @@
+{<img src="https://api.codeclimate.com/v1/badges/2c4dd0efe087817091bf/maintainability" />}[https://codeclimate.com/github/rileydcampbell/cs169-parser/maintainability]
+{<img src="https://api.codeclimate.com/v1/badges/2c4dd0efe087817091bf/test_coverage" />}[https://codeclimate.com/github/rileydcampbell/cs169-parser/test_coverage]
 == README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,7 +24,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
