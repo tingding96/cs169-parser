@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/Users/JeffreyWang/cs169/parser/app/controllers/xfiles_controller.rb": [
+      "/Users/rileycampbell/Desktop/Spring 2019/CS169 Folder/cs169-parser/app/controllers/xfiles_controller.rb": [
         1,
         null,
         1,
@@ -111,23 +111,22 @@
         null,
         null
       ],
-      "/Users/JeffreyWang/cs169/parser/app/controllers/application_controller.rb": [
+      "/Users/rileycampbell/Desktop/Spring 2019/CS169 Folder/cs169-parser/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-
-      "/Users/JeffreyWang/cs169/parser/app/helpers/application_helper.rb": [
+      "/Users/rileycampbell/Desktop/Spring 2019/CS169 Folder/cs169-parser/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/JeffreyWang/cs169/parser/app/helpers/jsonfiles_helper.rb": [
+      "/Users/rileycampbell/Desktop/Spring 2019/CS169 Folder/cs169-parser/app/helpers/jsonfiles_helper.rb": [
         1,
         null
       ],
-      "/Users/JeffreyWang/cs169/parser/app/models/xfile.rb": [
+      "/Users/rileycampbell/Desktop/Spring 2019/CS169 Folder/cs169-parser/app/models/xfile.rb": [
         1,
         1,
         null,
@@ -158,8 +157,7 @@
         null
       ]
     },
-
-    "timestamp": 1555345374
+    "timestamp": 1555460564
   },
   "RSpec": {
     "coverage": {

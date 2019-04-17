@@ -13,7 +13,7 @@ gem 'crack'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.10'
+gem 'rails'
 
 # Use sqlite3 version 1.3.11 as the database for Active Record
 group :development, :test do
@@ -82,3 +82,5 @@ end
 
 # for visualizing JSON's in graph form
 gem 'd3_rails', '~> 4.1', '>= 4.1.1'
+gem "actionview", ">= 4.2.11.1"
+gem "activejob", ">= 4.2.11"
