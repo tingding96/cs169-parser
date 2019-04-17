@@ -87,14 +87,25 @@ class XfilesController < ApplicationController
       properties = Xfile.get_properties(content)
       puts("content: ",content)
       prop_sets.push(properties)
-
     end
-
     @shared_set = prop_sets[0]
     prop_sets.each do |set|
       @shared_set = @shared_set & set
     end
     puts("shared set: ", @shared_set)
+  end
+
+  def download_xfile
+    id = params[:id]
+    @xfile = Xfile.find(id)
+    content = @xfile.content
+    # f = File.new("#{Rails.root}/app/assets/docs/#{@xfile.name}.json", "w+")     
+    # f.write(eval(@xfile.content).to_json)
+    # f.close
+    data = eval(@xfile.content).to_json
+    send_data data, :filename => "#{@xfile.name}.json"
+    # send_file "#{Rails.root}/app/assets/docs/#{@xfile.name}.json", type: "application/json", x_sendfile: true
+    flash[:notice] = "#{@xfile.name} was successfully downloaded."
   end
 
   #To delete the file from database.

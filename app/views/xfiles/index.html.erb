@@ -9,7 +9,8 @@
       <% @xfiles.each do |xfile| %>
         <tr class="drop-shadow">
           <td>
-            <%= link_to "More about #{xfile.name}", xfile_path(xfile) %>
+            <%= link_to "More about #{xfile.name}", xfile_path(xfile) %>\
+            <%= link_to "Download #{xfile.name}", download_xfile_path(xfile), data: { turbolinks: false } %>
           </td>
         </tr>
       <% end %>
