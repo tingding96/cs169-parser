@@ -5,8 +5,8 @@
   = label :xfile, :name, 'File Name'
   = text_field :xfile, 'name'
 
-  = label :xfile, :content, 'File'
-  = file_field_tag :content
+  = label :xfile, 'content', 'File'
+  = file_field_tag 'content[]', :multiple => true
 
   = submit_tag 'import'
 
