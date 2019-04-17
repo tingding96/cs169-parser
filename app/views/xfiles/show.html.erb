@@ -20,6 +20,18 @@
       </li>
     </div>
 
+  <div class="label_title">
+    Edit File
+  </div>
+  <%= form_tag edit_post_path(@xfile.id) do %>
+    <%= label_tag(:xfile, :property) %>
+    <%= text_field_tag(:property) %>
+
+
+    <%= label_tag(:xfile, :value) %>
+    <%= text_field_tag(:value) %>
+    <%= submit_tag 'save' %>
+  <% end %>
 
   <div class="label_title">
     Properties

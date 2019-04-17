@@ -5,7 +5,7 @@ class XfilesController < ApplicationController
   require 'json'
 
   def xfile_params
-    params.require(:xfile).permit(:name, :content)
+    params.require(:xfile).permit(:name, :content, :property, :value)
   end
 
   #To show the data fields and their relationships in a data file.
@@ -66,6 +66,19 @@ class XfilesController < ApplicationController
 
   #To edit the file, but not really necessary at the moment.
   def edit
+    params[:property]
+  end
+
+  def edit_post
+    id = params[:id] # retrieve movie ID from URI route
+    @xfile = Xfile.find(id) # look up movie by unique ID
+    data = @xfile.content
+    data = eval(data)
+    key = params[:property]
+    value = params[:value]
+    data[key] = value
+    @xfile = Xfile.create!(name: @xfile.name, content: data)
+    redirect_to xfiles_path
   end
 
   #To update the file, but also not necessary at the moment.
