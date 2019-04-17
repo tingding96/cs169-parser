@@ -19,7 +19,8 @@ class XfilesController < ApplicationController
 
   #To show the list of files uploaded to the application.
   def index
-    @xfiles = Xfile.all
+    # @xfiles = Xfile.all
+    @xfiles = Xfile.all.sort_by &:name
   end
 
   # default: render 'new' template
