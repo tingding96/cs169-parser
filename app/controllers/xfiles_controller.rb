@@ -5,7 +5,7 @@ class XfilesController < ApplicationController
   require 'json'
 
   def xfile_params
-    params.require(:xfile).permit(:name, :content)
+    params.require(:xfile).permit(:name, :content, :property, :value)
   end
 
   #To show the data fields and their relationships in a data file.
@@ -67,6 +67,19 @@ class XfilesController < ApplicationController
 
   #To edit the file, but not really necessary at the moment.
   def edit
+    params[:property]
+  end
+
+  def edit_post
+    id = params[:id] # retrieve movie ID from URI route
+    @xfile = Xfile.find(id) # look up movie by unique ID
+    data = @xfile.content
+    data = eval(data)
+    key = params[:property]
+    value = params[:value]
+    data[key] = value
+    @xfile = Xfile.create!(name: @xfile.name, content: data)
+    redirect_to xfiles_path
   end
 
   #To update the file, but also not necessary at the moment.
@@ -88,14 +101,25 @@ class XfilesController < ApplicationController
       properties = Xfile.get_properties(content)
       puts("content: ",content)
       prop_sets.push(properties)
-
     end
-
     @shared_set = prop_sets[0]
     prop_sets.each do |set|
       @shared_set = @shared_set & set
     end
     puts("shared set: ", @shared_set)
+  end
+
+  def download_xfile
+    id = params[:id]
+    @xfile = Xfile.find(id)
+    content = @xfile.content
+    # f = File.new("#{Rails.root}/app/assets/docs/#{@xfile.name}.json", "w+")     
+    # f.write(eval(@xfile.content).to_json)
+    # f.close
+    data = eval(@xfile.content).to_json
+    send_data data, :filename => "#{@xfile.name}.json"
+    # send_file "#{Rails.root}/app/assets/docs/#{@xfile.name}.json", type: "application/json", x_sendfile: true
+    flash[:notice] = "#{@xfile.name} was successfully downloaded."
   end
 
   #To delete the file from database.

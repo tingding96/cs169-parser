@@ -5,7 +5,11 @@ Rails.application.routes.draw do
       get'shared_props'
     end
   end
+
+  post 'xfiles/edit_post/:id' => 'xfiles#edit_post', as: 'edit_post'
   get'xfiles/shared_props' => 'xfiles#shared_props'
+
+  get 'xfiles/download_xfile/:id/', to: "xfiles#download_xfile", as: 'download_xfile'
 
   get 'xfiles/shared_files/:prop/', to: 'xfiles#shared_files', as: 'shared_files'
   # map '/' to be a redirect to '/files'

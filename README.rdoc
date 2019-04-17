@@ -1,4 +1,5 @@
-{<img src="https://api.codeclimate.com/v1/badges/bfe58fcb69c299b5fadf/maintainability" />}[https://codeclimate.com/github/jeffzywang/cs169-parser/maintainability]
+{<img src="https://api.codeclimate.com/v1/badges/02a925f8fcab4b681b5f/maintainability" />}[https://codeclimate.com/github/rileydcampbell/cs169-parser/maintainability]
+{<img src="https://api.codeclimate.com/v1/badges/02a925f8fcab4b681b5f/test_coverage" />}[https://codeclimate.com/github/rileydcampbell/cs169-parser/test_coverage]
 == README
 
 This README would normally document whatever steps are necessary to get the
